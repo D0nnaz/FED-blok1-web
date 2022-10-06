@@ -244,13 +244,13 @@ Doordat de hele site toegankelijk is met een toetsenbord werkt dit nu beter
   ### Dit ging goed/Heb ik geleerd: 
   De animatie in het begin, waar de teksten en buttons in beeld schuiven, meer met grid te werken en de fade als het menu geopend wordt. Iets waar ik eigenlijk ook wel blij mee ben is dat ik soms in de war was met mijn eigen site en de Tesla site. Dan veranderde ik iets in mijn code en keek ik in de browser en was ik verbaasd dat er niks veranderde, maar dan bleek dat de officiele Tesla site te zijn.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/intersection.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   De die niet gelukt zijn, kwamen helaas voornamelijk doordat ik gevallen was en ik daardoor niet eens echt heb kunnen proberen ze toe te voegen aan mijn site. Inert, intersection, currentElement bij de slidehsow/ carousel.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/fadein.png" width="375px" alt="bummer">
 </details>
 
 

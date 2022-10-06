@@ -521,49 +521,49 @@
 
         /*Foto's plaatsen*/
         .home main article:first-of-type {
-            background-image: url("./images/model3.jpeg");
+            background-image: url("../images/model3.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(2) {
-            background-image: url("./images/modely.jpeg");
+            background-image: url("../images/modely.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(3) {
-            background-image: url("./images/models.jpeg");
+            background-image: url("../images/models.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(4) {
-            background-image: url("./images/modelx.jpeg");
+            background-image: url("../images/modelx.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(5) {
-            background-image: url("./images/solarpanels.jpeg");
+            background-image: url("../images/solarpanels.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(6) {
-            background-image: url("./images/solarroof.webp");
+            background-image: url("../images/solarroof.webp");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
         }
 
         .home main article:nth-of-type(7) {
-            background-image: url("./images/accessoiries.jpeg ");
+            background-image: url("../images/accessoiries.jpeg ");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -587,43 +587,43 @@
             }
 
             .home main article:first-of-type {
-                background-image: url("./images/model3telefoon.jpeg");
+                background-image: url("../images/model3telefoon.jpeg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(2) {
-                background-image: url("./images/modelytelefoon.jpg");
+                background-image: url("../images/modelytelefoon.jpg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(3) {
-                background-image: url("./images/modelstelefoon.jpg");
+                background-image: url("../images/modelstelefoon.jpg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(4) {
-                background-image: url("./images/modelxtelefoon.jpg");
+                background-image: url("../images/modelxtelefoon.jpg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(5) {
-                background-image: url("./images/solarpanelstelefoon.jpg");
+                background-image: url("../images/solarpanelstelefoon.jpg");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(6) {
-                background-image: url("./images/solarrooftelefoon.webp");
+                background-image: url("../images/solarrooftelefoon.webp");
                 background-repeat: no-repeat;
                 background-position: center center;
             }
 
             .home main article:nth-of-type(7) {
-                background-image: url("./images/accessoiries.jpeg");
+                background-image: url("../images/accessoiries.jpeg");
                 background-repeat: no-repeat;
                 background-position: center center;
                 height: 76vh;
@@ -689,7 +689,7 @@
 
         .insurance main section:first-of-type {
             /*achtergrond plaatsen*/
-            background-image: url("./images/insuranceautos.jpeg");
+            background-image: url("../images/insuranceautos.jpeg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -982,7 +982,7 @@
             /*50 px*/
 
             .insurance main section:first-of-type {
-                background-image: url("./images/insuranceautosmobile.jpeg");
+                background-image: url("../images/insuranceautosmobile.jpeg");
             }
 
             .insurance section:nth-child(3) { 
@@ -1151,7 +1151,7 @@
             /*900 px*/
 
             .insurance main section:first-of-type {
-                background-image: url("./images/insuranceautos.jpeg");
+                background-image: url("/images/insuranceautos.jpeg");
             }
 
 
