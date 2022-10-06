@@ -1,0 +1,1230 @@
+        /**************/
+        /* CSS REMEDY */
+        /**************/
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /*********************/
+        /* CUSTOM PROPERTIES */
+        /*********************/
+        :root {
+            /* startje */
+            --color-text: #111;
+            --color-background: #eee;
+            --main-color: #171A20;
+            --witte-button: #F4F4F4A6;
+            --witte-tekst: #FFFF;
+            --donkere-button: #171A20CC;
+            --color-zwart: black;
+            --witte-border: white;
+            --zwarte-background: black;
+            --rood-color: red;
+        }
+
+        body,
+        html {
+            font-family: Gotham Book;
+            list-style-type: none;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: "Gotham Book";
+            src: url("../fonts/gotham_book-webfont.woff");
+        }
+
+        @font-face {
+            font-family: "Gotham Pro Bold";
+            src: url("../fonts/gotham_pro_bold-webfont.woff");
+        }
+
+        @font-face {
+            font-family: "Gotham Medium";
+            src: url("../fonts/gotham_medium-webfont.woff");
+        }
+
+        @font-face {
+            font-family: "Gotham light";
+            src: url("../fonts/gotham_light-webfont.woff");
+        }
+
+        .visually-hidden {
+            /*Bron: https://www.a11yproject.com/posts/how-to-hide-content/*/
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            height: 1em;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1em;
+        }
+
+        h2 {
+            font-size: 2.5em;
+        }
+
+        a,
+        button {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a {
+            color: var(--color-zwart);
+        }
+
+        /* States van buttons/ linkjes */
+        .insurance section:last-of-type a:hover {
+            color: var(--color-zwart);
+            background-color: var(--witte-tekst);
+            transition-duration: 0.7s;
+        }
+
+        .home main article section a:hover {
+            color: var(--rood-color);
+            transition-duration: 0.7s;
+
+        }
+
+        .home main article section a:active {
+            color: var(--color-text);
+            transition-duration: 0.7s;
+        }
+
+        .home main article a:hover {
+            opacity: 0.5;
+            transition-duration: 0.7s;
+        }
+
+        .home main article a:active {
+            color: var(--rood-color);
+            transition-duration: 0.7s;
+        }
+
+        .home article ul li:nth-of-type(2) a:hover {
+            opacity: 0.5;
+            transition-duration: 0.7s;
+        }
+
+        .home article ul li:nth-of-type(2) a:active {
+            color: var(--rood-color);
+            transition-duration: 0.7s;
+        }
+
+        a:focus {
+            outline-color: red;
+            outline-style: dashed;
+            outline-width: 0.3em;
+            transition-duration: 0.7s;
+        }
+
+        button:focus {
+            outline-color: red;
+            outline-style: dashed;
+            outline-width: 0.3em;
+            transition-duration: 0.7s;
+        }
+
+        nav button:hover {
+            /* Bron: https://youtu.be/0p3-qA0De2A*/
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            transition: all cubic-bezier(0.77, 0, 0.175, 1) 0, 7s;
+        }
+
+        /* einde bron */
+
+        nav a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            transition: all cubic-bezier(0.77, 0, 0.175, 1) 0, 7s;
+            transition-duration: 0.7s;
+        }
+
+        /* Einde states */
+
+        header {
+            display: grid;
+            grid-template-columns: auto 19fr auto;
+            padding: 1.1875em 1.25em;
+            width: 100%;
+            font-size: 0.9375em;
+            color: var(--main-color);
+            position: fixed;
+            z-index: 1;
+            justify-items: end;
+        }
+
+        .home header img {
+            width: 9.2em;
+            height: 1.8em;
+        }
+
+
+
+        nav {
+            transition: .5s ease-out;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        nav:first-of-type {
+            display: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 0.3125em 0.625em;
+            font-family: "Gotham Medium";
+            color: var(--main-color);
+            border-radius: .5em;
+        }
+
+        nav button {
+            padding: 0.3125em 0.625em;
+            font-family: "Gotham Medium";
+            color: var(--main-color);
+            border-radius: .5em;
+            border: 0;
+            font-size: 1em;
+            background-color: rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            transition: all cubic-bezier(0.77, 0, 0.175, 1) 0, 7s;
+            /*zelfde bron die ook boven staat*/
+            transition-duration: 0.4s;
+            background-color: transparent;
+        }
+
+
+        nav:nth-of-type(2) {
+            text-align: right;
+            line-height: 2em;
+        }
+
+        nav:first-of-type,
+        nav:nth-of-type(2) a {
+            display: none;
+        }
+
+
+        aside {
+            display: block;
+            position: fixed;
+            right: 0;
+            width: 20em;
+            background-color: var(--color-background);
+            padding: 5em 2.5em;
+            height: 100vh;
+            font-family: "Gotham light";
+            top: 0;
+            transition: all .7s ease;
+            transform: translateX(25em);
+        }
+
+        aside a {
+            display: flex;
+            color: black;
+            text-decoration: none;
+            padding: 0.625em 0em;
+
+        }
+
+        aside button {
+            font-size: 1.5em;
+            position: fixed;
+            top: 1.875em;
+            right: 1.875em;
+            background-color: transparent;
+            border: 0;
+            font-family: Gotham light;
+
+        }
+
+        aside.show {
+            transform: translateX(0);
+        }
+
+        main.blur {
+            /*class is actief als er op de button geklikt wordt*/
+            filter: blur(0.3em) brightness(78%);
+            transition: .5s ease-in-out;
+        }
+
+        nav.blur {
+            filter: blur(0.3em) brightness(78%);
+            transition: .5s ease-in-out;
+        }
+
+        header img.blur {
+            filter: blur(0.3em) brightness(78%);
+            transition: .5s ease-in-out;
+        }
+
+        /*Animatie tekst en buttons homepagina*/
+        .home main section:first-of-type h2 {
+            opacity: 0;
+            animation-name: fadeh2;
+            animation-delay: .75s;
+            animation-duration: .5s;
+            animation-fill-mode: both;
+            /*zorgt er voor dat animatie niet steeds opnieuw en opnieuw wordt uitgevoerd*/
+            position: relative;
+
+        }
+
+        @keyframes fadeh2 {
+            from {
+                transform: translateY(0.5em)
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .home main article:first-of-type section:first-of-type a,
+        .home main article:first-of-type section:first-of-type p {
+            opacity: 0;
+            animation-name: fadeTekst;
+            animation-delay: 1.2s;
+            animation-duration: .7s;
+            animation-fill-mode: both;
+        }
+
+
+
+        @keyframes fadeTekst {
+            from {
+                transform: translateY(0.5em)
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        .home main article:first-of-type ul li:first-child {
+            opacity: 0;
+            animation-name: fadeButtonLinks;
+            animation-delay: 1.2s;
+            animation-duration: .7s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeButtonLinks {
+            from {
+                transform: translateX(-2em);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .home main article:first-of-type ul li:nth-of-type(2) {
+            opacity: 0;
+            animation-name: fadeButtonRechts;
+            animation-delay: 1.2s;
+            animation-duration: .7s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes fadeButtonRechts {
+            from {
+                transform: translateX(2em);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /*einde animatie*/
+
+        .home main {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            /*hulp van de studentassistenten*/
+            scroll-snap-align: center;
+            max-height: 100vh;
+            transition: ease-in-out 1s;
+        }
+
+
+
+
+        @media (min-width: 75em) {
+
+            nav:first-of-type,
+            nav:nth-of-type(2) a {
+                display: initial;
+            }
+
+
+            header {
+                justify-items: center;
+            }
+
+            aside a:nth-of-type(-n+6) {
+                display: none;
+            }
+
+            nav button {
+                background-color: transparent;
+            }
+        }
+
+        .home article {
+            height: 100vh;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .home article:last-of-type {
+            height: 96vh;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .home article section {
+            top: 9em;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .home article section a {
+            text-decoration: underline;
+            padding: 0.2em;
+            color: var(--color-zwart);
+        }
+
+        .home article:first-of-type img {
+            display: flex;
+            position: relative;
+            bottom: 3em;
+            width: 1.7em;
+            height: 2em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .home article ul {
+            width: 100vw;
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            text-decoration: none;
+            text-align: center;
+            gap: 1.5em;
+            position: absolute;
+            bottom: 7em;
+            font-size: 0.9em;
+        }
+
+        .home article ul li:nth-of-type(2) {
+            background-color: var(--donkere-button);
+            padding: .5em 4.0625em;
+            border-radius: .25em;
+        }
+
+        .home article ul li:nth-of-type(2) a {
+            color: var(--witte-tekst);
+        }
+
+
+        article ul li:first-of-type a {
+            color: var(--main-color);
+        }
+
+        article ul li:first-of-type {
+            padding: .5em 5.125em;
+            background-color: var(--witte-button);
+            border-radius: .25em;
+        }
+
+        article ul a:nth-child(2) {
+            color: var(--main-color);
+        }
+
+
+        .home main article:last-of-type a {
+            background-color: var(--main-color);
+            border-radius: .25em;
+            padding: .5em 5.125em;
+            color: var(--witte-tekst);
+            text-decoration: none;
+            position: relative;
+            top: 57em;
+        }
+
+        .home main article img {
+
+
+            animation: bounce 2s infinite;
+            /*Bron inspiratie: https://codepad.co/snippet/pure-css-arrow-down-bouncing-animation*/
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-.5em);
+            }
+
+            60% {
+                transform: translateY(-.06em);
+            }
+        }
+
+        /*Einde bron*/
+
+
+        .home main article:nth-of-type(5) ul li:nth-of-type(2),
+        .home main article:nth-of-type(6) ul li:nth-of-type(2) {
+            padding: 0.5em em;
+        }
+
+
+
+
+
+
+
+
+        /*Foto's plaatsen*/
+        .home main article:first-of-type {
+            background-image: url("/images/model3.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(2) {
+            background-image: url("/images/modely.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(3) {
+            background-image: url("/images/models.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(4) {
+            background-image: url("/images/modelx.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(5) {
+            background-image: url("/images/solarpanels.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(6) {
+            background-image: url("/images/solarroof.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home main article:nth-of-type(7) {
+            background-image: url("/images/accessoiries.jpeg ");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+
+        /*Foto's responsive maken/ vervangen bij 600px*/
+        @media (max-width: 37.5em) {
+
+            .home article ul {
+                /*buttons repsonsive maken*/
+                flex-direction: column;
+                gap: 2em;
+                width: 100%;
+            }
+
+            .home article ul li {
+                margin-left: 5%;
+                margin-right: 5%;
+                height: 2.6em;
+            }
+
+            .home main article:first-of-type {
+                background-image: url("/images/model3telefoon.jpeg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(2) {
+                background-image: url("/images/modelytelefoon.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(3) {
+                background-image: url("/images/modelstelefoon.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(4) {
+                background-image: url("/images/modelxtelefoon.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(5) {
+                background-image: url("/images/solarpanelstelefoon.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(6) {
+                background-image: url("/images/solarrooftelefoon.webp");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            .home main article:nth-of-type(7) {
+                background-image: url("/images/accessoiries.jpeg");
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 76vh;
+            }
+
+            .home main article:last-of-type a {
+                /* top aanpassen bij 600px*/
+                top: 35em;
+            }
+
+            footer {
+                flex-direction: column;
+                /* onder elkaar zetten bij 600px*/
+                align-items: center;
+            }
+        }
+
+
+        /*footer voor beide pagina's*/
+        footer {
+            display: flex;
+            font-size: 0.8em;
+            gap: 0.7em;
+            width: 100%;
+            justify-content: center;
+            height: 12em;
+
+        }
+
+        .home footer a {
+            text-decoration: none;
+            color: #111;
+        }
+
+
+
+
+
+
+
+
+        /*INSURANCE CSS*/
+        .insurance nav a {
+            color: var(--witte-tekst);
+            /*kleuren naar wit veranderen*/
+            line-height: 1.7em;
+        }
+
+        .insurance nav button {
+            color: var(--witte-tekst);
+        }
+
+        .insurance header img {
+            /*logo*/
+            width: 9.3em;
+            height: 1.8em;
+        }
+
+        .insurance header {
+            position: absolute; /*zodat de header niet meer fixed is*/
+        }
+
+
+        .insurance main section:first-of-type {
+            /*achtergrond plaatsen*/
+            background-image: url("/images/insuranceautos.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+        }
+
+        .home main section:first-of-type img {
+            display: flex;
+            position: relative;
+            bottom: 5em;
+            width: 2.3em;
+            height: 2.7em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .insurance h2 {
+            color: var(--witte-tekst);
+            text-align: center;
+            position: relative;
+            top: 5em;
+        }
+
+        .insurance h3 {
+            font-size: 1.8em;
+        }
+
+        h4 {
+            font-size: 1.3em;
+        }
+
+
+        .insurance p {
+            font-family: "Gotham light";
+            font-size: 0.9em;
+        }
+
+        .insurance section {
+            height: fit-content;
+        }
+
+
+
+        .insurance section:first-of-type img:first-of-type {
+            display: flex;
+            position: relative;
+            bottom: 5em;
+            width: 2em;
+            height: 2em;
+            margin-left: auto;
+            margin-right: auto;
+            animation: bounce 2s infinite;
+        }
+
+
+        .insurance p a {
+            text-decoration: underline;
+        }
+
+        .insurance main section:first-of-type img:nth-of-type(-n+3) {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+
+        .insurance main section:first-of-type {
+            display: grid;
+            grid-auto-rows: 1fr auto;
+            justify-content: center;
+
+        }
+
+
+
+        .insurance section:nth-child(3) a:nth-child(3) {
+            text-decoration: none;
+            padding: 0.5em 1.5em;
+            border-radius: 0.1em;
+            border-color: var(--main-color);
+            border-style: solid;
+            margin: auto;
+        }
+
+
+
+        .insurance section:nth-of-type(6) a:nth-of-type(4).opacity {
+            /*dit zorgt er voor dat de tekst een actieve state krijgt als de image op display block staat*/
+            opacity: 1;
+        }
+
+        .insurance section:nth-of-type(6) a:nth-of-type(3).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-of-type(6) a:nth-of-type(2).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-of-type(6) a:nth-of-type(1).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-child(10) a:nth-of-type(1).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-child(10) a:nth-of-type(2).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-child(10) a:nth-of-type(3).opacity {
+            opacity: 1;
+        }
+
+        .insurance section:nth-child(10) a:nth-of-type(4).opacity {
+            opacity: 1;
+        }
+
+
+
+        .insurance section:nth-child(4) h3 {
+            font-size: 1.5em;
+        }
+
+
+        .insurance section:nth-child(5) {
+            display: flex;
+        }
+
+        .insurance img:nth-of-type(6) {
+            width: 10em;
+        }
+
+        .insurance section:nth-child(6) img:nth-child(n+2) {
+            display: none;
+        }
+
+        .insurance section:nth-child(7) a:nth-child(n+5) {
+            display: none;
+        }
+
+
+
+
+
+
+
+        .insurance section:last-of-type h3 {
+            color: var(--witte-tekst);
+            text-align: center;
+        }
+
+        .insurance section:last-of-type a {
+            color: var(--witte-tekst);
+            text-align: center;
+        }
+
+        .insurance section:last-of-type {
+            background-color: var(--color-zwart);
+            color: var(--color-background);
+            height: 80em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 1em;
+            border: none;
+            justify-content: center;
+        }
+
+
+        .insurance section:last-of-type p {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .insurance section:last-of-type p:last-of-type {
+            top: 30em;
+            position: relative;
+        }
+
+
+        .insurance section:last-of-type>a:first-of-type,
+        .insurance section:last-of-type>a:nth-of-type(2) {
+            padding: .5em;
+            width: 9em;
+            border-style: solid;
+            border-width: .2em;
+            border-radius: .2em;
+            text-align: center;
+        }
+
+
+        .insurance section:nth-child(5) {
+            width: 100%;
+        }
+
+        .insurance section:nth-child(6) img {
+            width: 100%;
+            display: flex;
+        }
+
+        .insurance section:nth-child(8) h3,
+        .insurance section:nth-child(8) p {
+            color: var(--witte-tekst);
+        }
+
+        .insurance section:nth-child(8) {
+            background-color: var(--zwarte-background);
+            height: 55em;
+            display: grid;
+            align-content: center;
+        }
+
+
+
+        .insurance section:nth-child(7) a {
+            border: none;
+            border-top: 0.2em solid var(--color-zwart);
+            background: none;
+            opacity: 0.3;
+        }
+
+        .insurance section:nth-child(8) img {
+            width: 100%;
+            display: inline;
+            height: fit-content;
+        }
+
+
+
+
+        .insurance section:nth-child(8) h3,
+        .insurance section:nth-child(8) p {
+            width: 80%;
+            margin: 1em auto;
+        }
+
+
+        .insurance section:nth-child(9) video:nth-of-type(n+2) {
+            display: none;
+        }
+
+        .insurance section:nth-child(9) video {
+            width: 100%;
+        }
+
+
+
+        .insurance section:nth-child(10) {
+            opacity: 1;
+            top: 10em;
+            opacity: 0.3;
+            border: none;
+            background-color: var(--color-zwart);
+
+        }
+
+        .insurance section:nth-child(10) a {
+            color: var(--witte-tekst);
+            border: none;
+            border-top: 0.2em solid var(--witte-border);
+            background: none;
+            opacity: 0.3;
+            height: 10em;
+        }
+
+		.insurance section:nth-child(7) a, .insurance section:nth-child(10) a{
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+
+
+
+        .insurance footer {
+            background-color: var(--color-zwart);
+            height: 20em;
+        }
+
+        .insurance footer a {
+            color: var(--witte-tekst);
+            text-decoration: none;
+
+        }
+
+
+
+
+
+        @media (min-width:3.125em) {
+            /*50 px*/
+
+            .insurance main section:first-of-type {
+                background-image: url("/images/insuranceautosmobile.jpeg");
+            }
+
+            .insurance section:nth-child(3) { 
+                display: grid;
+                height: fit-content;
+                gap: 2em;
+                text-align: center;
+                justify-items: center;
+            }
+
+
+            .insurance section:nth-child(3) p {
+                width: 85%
+            }
+
+
+            .insurance section:nth-child(2) a:nth-child(3) {
+                text-decoration: none;
+                padding: 0.5em 1.5em;
+                border-radius: 0.1em;
+                border-color: var(--main-color);
+                border-style: solid;
+            }
+
+            .insurance section:nth-child(3) img:first-of-type {
+                display: none;
+            }
+
+            .insurance section:nth-child(3) img:nth-of-type(2) {
+                width: 100%;
+            }
+
+            .insurance section:nth-child(4) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 18em;
+                margin-top: 2em;
+            }
+
+            .insurance section:nth-child(4) p,
+            h3 {
+                width: 90%;
+            }
+
+            .insurance section:nth-child(5) {
+                height: 6em;
+                font-size: 1em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: start;
+                justify-content: center;
+                text-align: left;
+            }
+
+
+
+            .insurance section:nth-of-type(5) img {
+                width: 100%;
+            }
+
+            .insurance section:nth-of-type(5) {
+                height: 50vw;
+            }
+
+
+            .insurance section:nth-of-type(6) img:first-child {
+                height: fit-content;
+                order: -50;
+                width: 100%;
+                display: block;
+            }
+
+
+            .insurance section:nth-child(8) {
+                height: 35em;
+                display: block;
+            }
+
+
+
+			.insurance section:nth-child(7), .insurance section:nth-child(10) {
+                display: grid;
+                grid-auto-flow: column;
+				justify-content: center;
+                opacity: 1;
+            }
+
+			.insurance section:nth-child(10) {
+				background-color: var(--zwarte-background);
+            }
+
+
+            .insurance section:last-of-type>a:first-of-type,
+            .insurance section:last-of-type>a:nth-of-type(2) {
+                width: 80%;
+
+            }
+
+        }
+
+        @media (min-width: 37.56253em) {
+
+            /*601 px*/
+            .insurance section:nth-child(3) img:first-of-type {
+                display: block;
+                width: 85%
+            }
+
+            .insurance section:nth-child(3) img:nth-of-type(2) {
+                display: none;
+            }
+
+            .insurance section:nth-child(4) p,
+            h3 {
+                width: 85%;
+            }
+
+
+
+            .insurance section:nth-of-type(5) {
+                height: 30em;
+            }
+
+
+            .insurance section:nth-child(6) {
+                height: 33vh;
+            }
+
+			.insurance section:nth-child(8) {
+                height: 45em;
+            }
+
+            .insurance section:last-of-type {
+                height: 60em;
+            }
+
+            .insurance section:last-of-type>a:first-of-type,
+            .insurance section:last-of-type>a:nth-of-type(2) {
+                padding: .5em;
+                width: 9em;
+
+            }
+
+            .insurance section:last-of-type p:last-of-type {
+                top: 20em;
+            }
+
+            .insurance footer {
+                height: 10em;
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+        @media (min-width:56.25em) {
+            /*900 px*/
+
+            .insurance main section:first-of-type {
+                background-image: url("/images/insuranceautos.jpeg");
+            }
+
+
+            .insurance section:nth-child(3) {
+                grid-template-rows: 2em 1fr;
+                gap: 5em;
+                margin-top: 5em;
+            }
+
+            .insurance section:nth-child(4) {
+                flex-direction: row;
+                align-items: flex-start;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 5em;
+                width: 48em;
+            }
+
+            .insurance section:nth-child(5) {
+                justify-content: center;
+                left: 7em;
+                position: relative;
+                width: 30em;
+            }
+
+            .insurance section:nth-child(6) {
+                height: 50vw;
+            }
+
+
+
+            .insurance section:nth-child(8) {
+                height: 65em;
+            }
+        }
+
+
+
+
+        @media (min-width:88.1875em) {
+
+            /*1411px*/
+            .insurance section:nth-child(3) img:first-of-type {
+                width: 70em;
+
+            }
+
+
+            .insurance section:nth-child(4) {
+                display: grid;
+                grid-template-columns: 20em 1fr;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                width: 70em;
+            }
+
+            .insurance section::nth-child(4) a {
+                gap: 1em;
+            }
+
+            .insurance section:nth-child(6) {
+                height: 45vw;
+            }
+
+			.insurance section:nth-child(7){
+				margin-left: auto; 
+				margin-right: auto;
+				width: 60em
+
+            }
+
+            .insurance section:nth-child(8) {
+                height: 65vw;
+            }
+        }
